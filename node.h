@@ -5,8 +5,8 @@ template <typename T>
 struct Node {
     T data;
     Node<T>* next;
-      
-    Node(T data) : data(data) {
+    int query;
+    Node(T data) : data(data), query(0) {
         next = nullptr;
     }
       

@@ -53,6 +53,7 @@ class TraitsList {
                 borrar = *temp;
                 (*temp) = (*temp)->next;
                 delete borrar;
+                return true;
             }
             return false;
         }  
