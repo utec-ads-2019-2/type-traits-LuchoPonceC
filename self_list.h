@@ -17,7 +17,7 @@ class SelfList {
     public:
         SelfList(Method method) : head(nullptr), method(method){};
 
-        bool insert(T data) {
+        void insert(T data) {
             // TODO
             Node<T> **temp = &(this->head);
             Node<T> *nuevo = new Node<T>(data);
@@ -25,7 +25,8 @@ class SelfList {
                 temp = &((*temp)->next);
             }
             *temp = nuevo;
-
+        
+            // Te faltó cambiar el return bool to void
 
 
         }
@@ -51,6 +52,7 @@ class SelfList {
 
             switch(this->method){
                 case Move:
+                // Podrías tener métodos privados para cada case
                     while((current)!=nullptr){
                         if(current->data == data){
                             if((this->method) == Move){

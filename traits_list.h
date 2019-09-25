@@ -30,7 +30,9 @@ class TraitsList {
         bool insert(T data) {
             // TODO
 
+            // Estás reservando memoria aún si no insertas el elemento
             Node<T> *nuevo = new Node<T>(data);
+            // Esto podrías hacerlo dentro del fin
             Node<T> **temp = &this->head;
             
  

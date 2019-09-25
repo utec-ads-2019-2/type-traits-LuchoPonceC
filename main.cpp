@@ -5,10 +5,19 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-   // Tester::execute();
-    SelfList<int> list(SelfList<int>::Transpose);
+    //Tester::execute();
+    SelfList<int> list(SelfList<int>::Move);
 
-    list.insert(14);
+    for (int i = 0; i < 100; i++)
+        list.insert(i);
+
+    list.find(50);
+    list.find(49);
+    list.find(50);
+
+    list.print();
+
+    /*list.insert(14);
     list.insert(16);
     list.print();
     list.insert(15);
@@ -24,7 +33,7 @@ int main(int argc, char const *argv[]) {
     list.print();
     list.find(13);
     list.find(13);
-    list.print();
+    list.print();*/
 
     return EXIT_SUCCESS;
 }
